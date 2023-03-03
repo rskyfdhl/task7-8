@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: auto;
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background: #f4f3f3;
+    height: 7vh;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    flex: 50%;
+}
+
+nav div.left-side {
+    padding-left: 10px;
+
+}
+
+nav div.right-side {
+    padding-right: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 35px;
+}
+
+.left-side img {
+    width: 30px;
+    filter: brightness(0);
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+nav .right-side a {
+    font-size: 15px;
+    padding: 8px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.overlay-nav {
+    width: 100%;
+    height: 18%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.47);
+    display: flex;
+    padding: 10px 80px;
+    align-items: end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overlay-nav a.list-active {
+    background-color: #000000;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    font-weight: 750;
+}
+
+.d-none {
+    /* display: none; */
+    opacity: 0;
+}
+
+.d-show {
+    opacity: 1;
+}
+
+.transition {
+    transition: all 0.3s;
+    /* opacity: 1; */
+
+}
+
+.text-white a {
+    text-decoration: none;
+    color: white;
+}
+
+/* contact form */
+
+form {
+    width: 350px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+form div {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    background-color: #dfdedf;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    color: white;
+    background-color: black;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    nav div.left-side {
+        padding-left: 0px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .d-sm-none a {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .right-side span {
+        display: none;
+    }
+}
